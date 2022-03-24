@@ -1,4 +1,5 @@
-Daily Coding Challenges
+# :trophy: Daily Coding Challenges
+
 I've made it a habit to complete at least one Javascript coding challenge a day. These challenges are a great way to practice spaced repition and active recall of Javascript fundamentals.
 
 How It's Made:
