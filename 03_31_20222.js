@@ -9,3 +9,15 @@ function sumTwoSmallestNumbers(numbers) {
     let sortedArray = numbers.sort((a,b) => a-b)
     return sortedArray[0] + sortedArray[1]
 }
+
+// 7 kyu: Credit Card Mask
+// Your task is to write a function maskify, which changes all but the last four characters into '#'.
+// maskify("4556364607935616") == "############5616"
+
+function maskify(cc) {
+    let ccArr = cc.split('');
+    for (let i = -5; i >= -ccArr.length; i--) {
+      ccArr.splice(i,1,"#")
+    } return ccArr.join('')
+}
+
