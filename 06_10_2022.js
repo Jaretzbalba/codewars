@@ -25,3 +25,19 @@ function count(array) {
   });
   return names;
 }
+
+// 7 kyu: Divide and Conquer
+// Given a mixed array of number and string representations of integers, add up the string integers and subtract this from the total of the non-string integers.
+
+// Return as a number.
+
+function divCon(x) {
+  //filter array if element typeof === number and reduce
+  //filter array if element typeof !== number and reduce
+  //return difference of two vals
+  let nonStrInt = x
+    .filter(e => typeof e === 'number')
+    .reduce((a, b) => a + b, 0);
+  let strInt = x.filter(e => typeof e !== 'number').reduce((a, b) => a + +b, 0);
+  return nonStrInt - strInt;
+}
