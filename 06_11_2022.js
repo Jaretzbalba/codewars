@@ -21,3 +21,13 @@ function lastSurvivor(letters, coords) {
   }
   return strArr[0];
 }
+
+// 7 kyu: Nth Smallest Element (Array Series #4)
+// Given an array/list [] of integers , Find the Nth smallest element in this array of integers
+
+function nthSmallest(arr, pos) {
+  //sort arr from min to max
+  //return the element at the given index from the sorted array
+  let sortedArr = arr.sort((a, b) => a - b);
+  return sortedArr[pos - 1];
+}
