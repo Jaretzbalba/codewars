@@ -94,3 +94,54 @@ function mygcd(x, y) {
   }
   return divs[divs.length - 1];
 }
+
+// 7 kyu: Sort the Gift Code
+// Write a function called sortGiftCode/sort_gift_code/SortGiftCode that accepts a string containing up to 26 unique alphabetical characters, and returns a string containing the same characters in alphabetical order.
+
+// Examples (Input -- => Output):
+// "abcdef"                      -- => "abcdef"
+// "pqksuvy"                     -- => "kpqsuvy"
+// "zyxwvutsrqponmlkjihgfedcba"  -- => "abcdefghijklmnopqrstuvwxyz"
+
+function sortGiftCode(code) {
+  return code.split('').sort().join('');
+}
+
+// 7 kyu: Find the vowels
+// We want to know the index of the vowels in a given word, for example, there are two vowels in the word super (the second and fourth letters).
+
+// So given a string "super", we should return a list of [2, 4].
+
+// Some examples:
+// Mmmm  => []
+// Super => [2,4]
+// Apple => [1,5]
+// YoMama -> [1,2,4,6]
+// NOTES
+// Vowels in this context refers to: a e i o u y (including upper case)
+
+function vowelIndices(word) {
+  let vowels = ['a', 'e', 'i', 'o', 'u', 'y', 'A', 'E', 'I', 'O', 'U', 'Y'];
+  return word
+    .split('')
+    .map((e, i) => (vowels.includes(e) ? i + 1 : e))
+    .filter(e => typeof e === 'number');
+}
+
+// 7 kyu: Functional Addition
+// Create a function add(n)/Add(n) which returns a function that always adds n to any number
+
+// Note for Java: the return type and methods have not been provided to make it a bit more challenging.
+
+// var addOne = add(1);
+// addOne(3); // 4
+
+// var addThree = add(3);
+// addThree(3); // 6
+
+function add(n) {
+  function addn(b) {
+    return n + b;
+  }
+  return addn;
+}
