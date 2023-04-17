@@ -76,6 +76,10 @@ function isIsogram(str) {
 // [1,2,2,3,3,3,4,3,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).
 
 function findOdd(A) {
+  //initialize an empty object
+  //iterate through array of nums and count each time a number occurs
+  //iterate through object and check which number has a odd value
+  //return number
   let numObj = {};
   A.forEach(num => {
     numObj[num] ? numObj[num]++ : (numObj[num] = 1);
